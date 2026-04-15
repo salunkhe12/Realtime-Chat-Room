@@ -1,0 +1,257 @@
+:root {
+  color: #123047;
+  background:
+    radial-gradient(circle at top left, rgba(255, 214, 165, 0.9), transparent 24%),
+    radial-gradient(circle at right bottom, rgba(128, 184, 255, 0.32), transparent 28%),
+    linear-gradient(145deg, #f5efe7 0%, #e9f1fb 48%, #f8fbff 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.chat-layout {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid rgba(18, 48, 71, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 24px 70px rgba(18, 48, 71, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.hero-panel h1,
+.hero-panel p,
+.chat-window-header h2 {
+  margin: 0;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #9c5b2f;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.hero-copy {
+  margin-top: 10px;
+  max-width: 64ch;
+  line-height: 1.55;
+  color: #587188;
+}
+
+.identity-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span,
+.status-label {
+  font-size: 0.9rem;
+  color: #5d7287;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(18, 48, 71, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 14px 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #668fc8;
+  box-shadow: 0 0 0 4px rgba(102, 143, 200, 0.12);
+}
+
+.status-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(240, 245, 251, 0.9);
+}
+
+.status-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+.status-connected {
+  color: #18542f;
+  background: #dff6e8;
+}
+
+.status-connecting,
+.status-disconnected,
+.status-connection-error {
+  color: #8c471b;
+  background: #ffe9d8;
+}
+
+.error-banner {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 16px;
+  color: #8d3118;
+  background: #fff0ea;
+}
+
+.chat-window {
+  display: grid;
+  gap: 14px;
+  min-height: 52vh;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(244, 248, 253, 0.86);
+}
+
+.chat-window-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  color: #597286;
+}
+
+.message-list {
+  display: grid;
+  gap: 12px;
+  max-height: 52vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.message-card {
+  max-width: min(100%, 560px);
+  padding: 14px 16px;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(18, 48, 71, 0.06);
+}
+
+.message-own {
+  justify-self: end;
+  background: linear-gradient(135deg, #173b66 0%, #446da1 100%);
+  color: #fff;
+}
+
+.message-received {
+  justify-self: start;
+  background: #fff;
+  color: #173047;
+}
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 0.84rem;
+}
+
+.message-card p {
+  margin: 0;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.empty-state {
+  display: grid;
+  gap: 6px;
+  place-items: center;
+  min-height: 220px;
+  padding: 24px;
+  border: 1px dashed rgba(18, 48, 71, 0.18);
+  border-radius: 24px;
+  text-align: center;
+  color: #61798e;
+}
+
+.empty-state p,
+.empty-state span {
+  margin: 0;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.composer-field {
+  min-width: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 18px;
+  padding: 14px 20px;
+  color: #fff;
+  background: linear-gradient(135deg, #ba5c31 0%, #6d8fcb 100%);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    padding: 0;
+  }
+
+  .chat-layout {
+    min-height: 100vh;
+    padding: 18px;
+    border-radius: 0;
+  }
+
+  .identity-grid,
+  .composer {
+    grid-template-columns: 1fr;
+  }
+
+  .message-card {
+    max-width: 100%;
+  }
+}

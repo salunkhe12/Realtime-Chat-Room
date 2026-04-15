@@ -1,0 +1,14 @@
+[
+  {
+    "keywords": ["hi", "hello"],
+    "response": "Hi 👋 Hello! How can I help you?"
+  },
+  {
+    "keywords": ["how are you"],
+    "response": "I am doing well 😊 What about you?"
+  },
+  {
+    "keywords": ["bye"],
+    "response": "Goodbye 👋  Have a great day!"
+  }
+]

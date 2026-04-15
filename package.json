@@ -1,0 +1,23 @@
+{
+  "name": "web-socket",
+  "version": "1.0.0",
+  "description": "Simple realtime chat with React and Node WebSocket backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev:client": "vite frontend --host 0.0.0.0 --port 5173",
+    "dev:server": "node backend/server.js",
+    "build": "vite build frontend --outDir dist --emptyOutDir",
+    "start": "node backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@openai/codex": "^0.120.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "vite": "^8.0.8",
+    "ws": "^8.20.0"
+  }
+}

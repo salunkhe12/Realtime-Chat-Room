@@ -1,0 +1,3 @@
+{"type":"system","message":"SmokeTest joined the room","timestamp":"2026-04-14T05:57:35.087Z"}
+{"type":"message","username":"SmokeTest","message":"hello","timestamp":"2026-04-14T05:57:35.088Z"}
+{"type":"system","message":"SmokeTest left the room","timestamp":"2026-04-14T05:57:35.091Z"}
